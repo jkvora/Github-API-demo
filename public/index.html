@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Github API demo</title>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        
+         <script type="text/javascript" src="js/handlebars.js"></script>
+         <script type="text/javascript" src="js/jquery.min.js"></script>
+		   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		  <!--Script handleBar Template--> 
+		 <script id="handlebars-demo" type="text/x-handlebars-template">
+		 	
+		 	 {{#each this}}
+			   <div class="profile-container" id="{{login}}">
+			   		
+			   		<div class="image_container">
+			   			<div class="cancel_btn" id={{login}} ></div>
+			   			<img  style="width:200px;height:200px" src="{{image}}">
+			   		</div>
+
+
+			   		<div class="user_name">
+			   			<b> {{name}} </b>
+			   		</div>
+
+			   		<div class="followers">
+			   			<b>Followers: </b>{{followers}}
+			   		</div>
+
+			   		<div class="location">
+			   			<b>Location : </b> {{location}}
+			   		</div>
+
+			   	</div>		
+  		  {{/each}}
+
+		 </script>
+		 <!--Template Endsd here-->
+
+		<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+    <body>
+
+
+
+
+<!--Input Search And Button-->
+<div class="container">
+      <div class="col-xs-9" style="padding-top:25px;">
+        <div class="form-group">
+        		<input type="text" class="form-control" id="search_user"  name="search_user"  placeholder="Search login">
+        </div>
+     </div>
+
+    <div class="col-xs-3" style="padding-top:25px">
+					 <button class="btn btn-primary btn-block" id="search_btn"><span>Add</span></button>
+	</div>
+</div>
+
+<!--Preloader-->
+<div id="preloader" class="display_none">
+  <div class="loadersmall "></div>
+</div>
+
+
+<!--Alerts of Danger-->
+<div class="alert alert-danger fade in display_none" id="danger_noexist">
+    <a href="#" class="close"  aria-label="close">&times;</a>
+    <strong> No valid user of such name exits...!!!</strong>
+ </div>
+
+ <div class="alert alert-danger fade in display_none" id="danger_added">
+    <a href="#" class="close"  aria-label="close">&times;</a>
+    <strong>User already added!!!</strong>
+ </div>
+
+<!--Alerts end here-->
+
+
+<div style="padding:10px">
+	<div style="float:left;padding-top:5px;" ><b>Sort By :</b></div>
+	<!--Name-->
+	 <div class="dropdown 	sort_items"">
+	    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Name
+	    <span class="caret"></span></button>
+	    <ul class="dropdown-menu">
+	       <li><a id="srt_asc_name" href="#">Ascending</a></li>
+	      <li><a id="srt_desc_name" href="#">Descending</a></li>
+	    </ul>
+	  </div>
+
+	  <!--Location-->
+	<div class="dropdown sort_items">
+	    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Location
+	    <span class="caret"></span></button>
+	    <ul class="dropdown-menu">
+	      <li><a  id="srt_asc_location" href="#">Ascending</a></li>
+	      <li><a id="srt_desc_location" href="#">Descending</a></li>
+	      
+	    </ul>
+	  </div>
+
+	<!--Followers-->
+ 	<div  class="sort_items"">
+		 <button class="btn btn-primary btn-block " id="sort_follwers"><span>Followers</span></button>
+	</div>
+  
+</div>
+
+
+    <!--Cards will be attached here-->
+    <div id="disp_users" class="disp_users"></div>
+
+    </body>
+</html>

@@ -1,0 +1,88 @@
+.profile-container{
+	margin: 10px;
+	float: left;
+	border: 1px solid skyblue;
+	position: relative;
+	height: 280px;
+	width: 206px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.25s linear;
+}
+
+.profile-container:hover{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5),0 3px 10px 0 rgba(0,0,0,0.19) ;  
+}
+
+
+.image_container{
+	padding: 3px;
+	position: relative;
+}
+
+.cancel_btn{
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2UlEQVR42q3TPQrCQBCG4Y2NHiCdglhY5woiXkKw0SPY+Y//nUfQRvASol4hvaCCdjmANuK7sAuDRgiuAw+EYfcjs9l46rOyaKCMgumdsMMSN7nYE88ptNFBRsXXHVPM8JQBevMaVZWsNqjpEBvQxTjhZls9TDwz81G89gNDNOGbXoQFBkiLcYqeSRqJZH0OcwTYml4FIVpmflt9HbBHSTQjsSEwvVAE+mLtQQeckX+bT4aoL5t1Xf4S4DyC8yE6f0ZdThdJl/NVtiE//0yycqir+N95hatc/AIZQkaBSvFrJAAAAABJRU5ErkJggg==');
+	height: 16px;
+	width: 16px;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0px;
+}
+
+.sort_items{
+	float: left;
+	padding-left: 10px;
+}
+
+.disp_users{
+	clear: both;
+	padding: 10px;
+}
+
+.user_name{
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.followers{
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.location{
+	padding-left: 10px;
+	font-size: 14px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    width: 195px;
+    white-space: nowrap;
+}
+
+
+
+
+.display_none{
+	display: none;
+}
+
+
+.display{
+	display: block;
+}
+
+.loadersmall {
+  border: 5px solid #f3f3f3;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border-top: 5px solid #555;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}	
