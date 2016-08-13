@@ -19,7 +19,7 @@ It is done to pull data of users for eg. simple demo @ https://api.github.com/us
 To run locally:Clone the repository. <br/>
 Run : <b>npm install</b> <br/>
 After installing dependencies,run command: <b>"npm start"</b> <br/>
-In browser launch : <a href="localhost:300" target="_blank">localhost</a> <br/>
+In browser launch : <a href="http://localhost:300" target="_blank">localhost</a> <br/>
 
 
 
